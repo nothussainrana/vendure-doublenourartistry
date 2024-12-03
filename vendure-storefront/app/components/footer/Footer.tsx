@@ -28,7 +28,7 @@ export default function Footer({
   return (
 <footer className="bg-black text-gray-200 py-10">
       <div className="max-w-screen-xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center space-between">
+        <div className="flex flex-col md:flex-row justify-between space-between">
           <div className="flex-1 flex-col items-center md:items-start mb-6 md:mb-0">
             <div className="flex items-center mb-4">
               <img
@@ -36,7 +36,7 @@ export default function Footer({
                 alt="Double Nour Artistry Logo"
                 className="h-16" // Adjust the height of the logo
               />
-              <div>
+              <div className="pl-4">
               <p className="font-semibold text-lg text-[#D1853A]">Double Nour</p>
               <p className="font-semibold text-lg text-[#D1853A]">Artistry</p>
               </div>
@@ -54,31 +54,34 @@ export default function Footer({
               <img src="googlepay-icon.png" alt="Google Pay" className="h-8" />
             </div>
           </div>
-          <div className="flex-1 flex-col items-center md:items-end">
-          <div className="flex flex-col items-center md:items-start space-y-2 text-center md:text-left">
-              <a href="#" className="text-sm text-[#D1853A] hover:text-white">Privacy Policy</a>
-              <a href="#" className="text-sm text-[#D1853A] hover:text-white">Terms & Conditions</a>
-              <a href="#" className="text-sm text-[#D1853A] hover:text-white">Payment Methods</a>
-              <a href="#" className="text-sm text-[#D1853A] hover:text-white">Shipping Policy</a>
-              <a href="#" className="text-sm text-[#D1853A] hover:text-white">Returns & Refunds</a>
+          <div className="flex-1 flex justify-end pr-20">
+            <div className="w-max">
+              <div className="flex flex-col space-y-2 text-left">
+                <a href="#" className="text-sm text-[#D1853A] hover:text-white">Privacy Policy</a>
+                <a href="#" className="text-sm text-[#D1853A] hover:text-white">Terms & Conditions</a>
+                <a href="#" className="text-sm text-[#D1853A] hover:text-white">Payment Methods</a>
+                <a href="#" className="text-sm text-[#D1853A] hover:text-white">Shipping Policy</a>
+                <a href="#" className="text-sm text-[#D1853A] hover:text-white">Returns & Refunds</a>
+              </div>
             </div>
           </div>
           <div className="flex-1 flex-col items-center md:items-end">
 
 
             {/* Subscribe Form */}
-            <div className="mt-6">
+            <div>
+              <p className="text-gold font-bold pb-3">Subscribe</p>
               <p className="text-sm text-gold">
                 Enter your email below to be the first to know about new collections and product launches
               </p>
-              <div className="flex mt-2 justify-center md:justify-end">
+              <div className="flex mt-2">
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="px-4 py-2 rounded-l-md border border-gray-600 bg-gray-800 text-white focus:outline-none"
+                  className="flex-1 bg-black px-4 py-2 rounded-l-md border border-gold text-gold placeholder-gold"
                 />
-                <button className="bg-[#D1853A] text-white px-4 py-2 rounded-r-md hover:bg-[#b07a30]">
-                  Subscribe
+                <button className="text-gold px-4 py-2 rounded-r-md">
+                  \/
                 </button>
               </div>
             </div>
