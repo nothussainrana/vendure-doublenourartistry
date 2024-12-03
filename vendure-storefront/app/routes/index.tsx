@@ -18,8 +18,6 @@ export default function Index() {
   const headerImage = collections[0]?.featuredAsset?.preview;
 
   return (
-    <>
-      <div>Main Index Page</div>
-    </>
+    <div className='pt-24'>Main Index Page</div>
   );
 }
