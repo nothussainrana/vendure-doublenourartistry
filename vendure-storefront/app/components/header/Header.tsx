@@ -1,11 +1,6 @@
-import { Link, useLoaderData } from '@remix-run/react';
-import { ShoppingBagIcon } from '@heroicons/react/24/outline';
-import { SearchBar } from '~/components/header/SearchBar';
-import { useRootLoader } from '~/utils/use-root-loader';
-import { UserIcon } from '@heroicons/react/24/solid';
-import { useScrollingUp } from '~/utils/use-scrolling-up';
-import { classNames } from '~/utils/class-names';
-import { useTranslation } from 'react-i18next';
+import { Link } from "@remix-run/react";
+import { ShoppingBagIcon, UserIcon } from "@heroicons/react/24/outline";
+import { HeartIcon } from "@heroicons/react/24/solid";
 
 export function Header({
   onCartIconClick,
@@ -14,74 +9,104 @@ export function Header({
   onCartIconClick: () => void;
   cartQuantity: number;
 }) {
-  const data = useRootLoader();
-  const isSignedIn = !!data.activeCustomer.activeCustomer?.id;
-  const isScrollingUp = useScrollingUp();
-  const { t } = useTranslation();
-
   return (
-    <header
-      className={classNames(
-        isScrollingUp ? 'sticky top-0 z-10 animate-dropIn' : '',
-        'bg-gradient-to-r from-zinc-700 to-gray-900 shadow-lg transform shadow-xl',
-      )}
-    >
-      <div className="bg-zinc-100 text-gray-600 shadow-inner text-center text-sm py-2 px-2 xl:px-0">
-        <div className="max-w-6xl mx-2 md:mx-auto flex items-center justify-between">
-          <div>
-            <Link
-              to={isSignedIn ? '/account' : '/sign-in'}
-              className="flex space-x-1"
-            >
-              <UserIcon className="w-4 h-4"></UserIcon>
-              <span>
-                {isSignedIn ? t('account.myAccount') : t('account.signIn')}
-              </span>
-            </Link>
-          </div>
-        </div>
-      </div>
-      <div className="max-w-6xl mx-auto p-4 flex items-center space-x-4">
-        <h1 className="text-white w-10">
-          <Link to="/">
-            <img
-              src="/cube-logo-small.webp"
-              width={40}
-              height={31}
-              alt={t('commmon.logoAlt')}
-            />
+    <header className="fixed top-0 left-0 w-full z-50 bg-black shadow-md">
+      <div className="container mx-auto flex items-center justify-between px-6 py-4">
+        {/* Logo */}
+        <Link to="/" className="flex items-center text-white font-bold text-xl">
+          <img
+            src="/logo.JPEG"
+            alt="Logo"
+            className="h-8 w-auto mr-3"
+          />
+          Double Nour Artistry
+        </Link>
+
+        {/* Navigation */}
+        <nav className="hidden md:flex space-x-6 text-sm font-medium">
+          <Link to="/" className="text-white hover:text-gold">
+            Home
           </Link>
-        </h1>
-        <div className="flex space-x-4 hidden sm:block">
-          {data.collections.map((collection) => (
-            <Link
-              className="text-sm md:text-base text-gray-200 hover:text-white"
-              to={'/collections/' + collection.slug}
-              prefetch="intent"
-              key={collection.id}
+          <div className="relative group">
+            <button className="flex items-center text-white hover:text-gold">
+              Shop
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 ml-1"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+            {/* Dropdown */}
+            <div className="absolute left-0 hidden group-hover:block bg-black border border-gold mt-2 rounded-lg shadow-lg">
+              <Link
+                to="/shop/category1"
+                className="block px-4 py-2 text-white hover:bg-gold hover:text-black"
+              >
+                Category 1
+              </Link>
+              <Link
+                to="/shop/category2"
+                className="block px-4 py-2 text-white hover:bg-gold hover:text-black"
+              >
+                Category 2
+              </Link>
+            </div>
+          </div>
+          <Link to="/about" className="text-white hover:text-gold">
+            About
+          </Link>
+          <Link to="/contact" className="text-white hover:text-gold">
+            Contact
+          </Link>
+        </nav>
+
+        {/* Search Bar & Icons */}
+        <div className="flex items-center space-x-6">
+          {/* Search Bar */}
+          <div className="hidden md:block relative">
+            <input
+              type="text"
+              placeholder="Search"
+              className="bg-gray-800 text-white text-sm px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 absolute right-3 top-2.5 text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              {collection.name}
-            </Link>
-          ))}
-        </div>
-        <div className="flex-1 md:pr-8">
-          <SearchBar></SearchBar>
-        </div>
-        <div className="">
-          <button
-            className="relative w-9 h-9 bg-white bg-opacity-20 rounded text-white p-1"
-            onClick={onCartIconClick}
-            aria-label="Open cart tray"
-          >
-            <ShoppingBagIcon></ShoppingBagIcon>
-            {cartQuantity ? (
-              <div className="absolute rounded-full -top-2 -right-2 bg-primary-600 min-w-6 min-h-6 flex items-center justify-center text-xs p-1">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 4a6 6 0 100 12 6 6 0 000-12zM21 21l-4.35-4.35"
+              />
+            </svg>
+          </div>
+
+          {/* Icons */}
+          <Link to="/wishlist" className="text-white hover:text-gold">
+            <HeartIcon className="h-6 w-6" />
+          </Link>
+          <button onClick={onCartIconClick} className="relative text-white hover:text-gold">
+            <ShoppingBagIcon className="h-6 w-6" />
+            {cartQuantity > 0 && (
+              <span className="absolute top-0 right-0 bg-gold text-black text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                 {cartQuantity}
-              </div>
-            ) : (
-              ''
+              </span>
             )}
           </button>
+          <Link to="/account" className="text-white hover:text-gold">
+            <UserIcon className="h-6 w-6" />
+          </Link>
         </div>
       </div>
     </header>
