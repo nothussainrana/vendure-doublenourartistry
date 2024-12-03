@@ -11,7 +11,7 @@ export default {
       colors: {
         primary: colors.sky,
         secondary: colors.emerald,
-        gold: "#D1853A", // Adjust the shade of gold if needed
+        gold: "#D1853A",
         black: "#000000",
         white: "#FFFFFF",
       },
