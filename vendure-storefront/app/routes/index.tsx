@@ -18,9 +18,12 @@ export default function Index() {
   const headerImage = collections[0]?.featuredAsset?.preview;
 
   return (
-    <div className="bg-black text-white h-96 flex flex-col justify-center px-5">
-      <h1 className="text-gold text-left text-2xl font-bold">Double Nour Artistry</h1>
-      <p className="text-left text-lg">Custom tailor-made crafts</p>
+    <div className="bg-black">
+      <div className="bg-black text-white h-96 flex flex-col justify-center px-5 max-w-screen-xl mx-auto">
+        <h1 className="text-gold text-left text-2xl font-bold">Double Nour Artistry</h1>
+        <p className="text-left text-lg">Custom tailor-made crafts</p>
+      </div>
     </div>
+
   );
 }
