@@ -40,7 +40,7 @@ export default function Footer({
   const { t } = useTranslation();
 
   return (
-<footer className="bg-black text-gray-200 py-10">
+<footer className="bg-black text-gray-200 py-5">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between space-between">
           <div className="flex-1 flex-col items-center md:items-start mb-6 md:mb-0">
@@ -48,7 +48,7 @@ export default function Footer({
               <img
                 src="/logo.png"
                 alt="Double Nour Artistry Logo"
-                className="h-16" // Adjust the height of the logo
+                className="h-16"
               />
               <div className="pl-4">
               <p className="font-semibold text-lg text-[#D1853A]">Double Nour</p>
@@ -67,7 +67,7 @@ export default function Footer({
             
             </div>
           </div>
-          <div className="flex-1 flex justify-end pr-20">
+          <div className="flex-1 flex justify-start md:justify-end pr-20">
             <div className="w-max">
               <div className="flex flex-col space-y-2 text-left">
                 <a href="#" className="text-sm text-[#D1853A] hover:text-white">Privacy Policy</a>
@@ -83,7 +83,7 @@ export default function Footer({
 
             {/* Subscribe Form */}
             <div>
-              <p className="text-gold font-bold pb-3">Subscribe</p>
+              <p className="text-gold font-bold pb-3 pt-4 md:pt-0">Subscribe</p>
               <p className="text-sm text-gold">
                 Enter your email below to be the first to know about new collections and product launches
               </p>
