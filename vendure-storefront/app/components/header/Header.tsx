@@ -15,18 +15,21 @@ export function Header({
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
-            src="logo.png"
+            src="/logo.png"
             className="h-16"
             alt="Nour Artistry Logo"
           />
         </a>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <a href="/account">
           <button
             type="button"
+            
             className="text-black bg-gold hover:bg-black hover:text-gold hover:outline hover:outline-1 hover:outline-gold focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
             Login
           </button>
+          </a>
         </div>
         <div
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
