@@ -107,6 +107,8 @@ export default function App() {
 
   useChangeLanguage(locale);
 
+  
+
   useEffect(() => {
     // When the loader has run, this implies we should refresh the contents
     // of the activeOrder as the user may have signed in or out.

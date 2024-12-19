@@ -51,8 +51,8 @@ export default function Footer({
                 className="h-16"
               />
               <div className="pl-4">
-              <p className="font-semibold text-lg text-[#D1853A]">Double Nour</p>
-              <p className="font-semibold text-lg text-[#D1853A]">Artistry</p>
+              <p className="font-semibold text-lg text-[#FFB300]">Double Nour</p>
+              <p className="font-semibold text-lg text-[#FFB300]">Artistry</p>
               </div>
             </div>
             <p className="text-sm text-gold">info@nourartistry.com</p>
@@ -60,21 +60,21 @@ export default function Footer({
             <p className="text-sm text-gold">Address Line 1, City Example, Ottawa, Canada</p>
             {/* Payment Methods */}
             <div className="flex space-x-2 mt-4 items-center">
-            <Icon icon="fa:cc-visa" style={{color: "#D1853A"}} width="45" height="30" />
-            <Icon icon="fa:cc-mastercard" style={{color: "#D1853A"}} width="45" height="30"/>
-            <Icon icon="fa:cc-stripe" style={{color: "#D1853A"}} width="45" height="30"/>
-            <Icon icon="fontisto:apple-pay" style={{color: "#D1853A"}} width="45" height="30"/>
+            <Icon icon="fa:cc-visa" style={{color: "#FFB300"}} width="45" height="30" />
+            <Icon icon="fa:cc-mastercard" style={{color: "#FFB300"}} width="45" height="30"/>
+            <Icon icon="fa:cc-stripe" style={{color: "#FFB300"}} width="45" height="30"/>
+            <Icon icon="fontisto:apple-pay" style={{color: "#FFB300"}} width="45" height="30"/>
             
             </div>
           </div>
           <div className="flex-1 flex justify-start md:justify-end pr-20">
             <div className="w-max">
               <div className="flex flex-col space-y-2 text-left">
-                <a href="#" className="text-sm text-[#D1853A] hover:text-white">Privacy Policy</a>
-                <a href="#" className="text-sm text-[#D1853A] hover:text-white">Terms & Conditions</a>
-                <a href="#" className="text-sm text-[#D1853A] hover:text-white">Payment Methods</a>
-                <a href="#" className="text-sm text-[#D1853A] hover:text-white">Shipping Policy</a>
-                <a href="#" className="text-sm text-[#D1853A] hover:text-white">Returns & Refunds</a>
+                <a href="#" className="text-sm text-gold hover:text-white">Privacy Policy</a>
+                <a href="#" className="text-sm text-gold hover:text-white">Terms & Conditions</a>
+                <a href="#" className="text-sm text-gold hover:text-white">Payment Methods</a>
+                <a href="#" className="text-sm text-gold hover:text-white">Shipping Policy</a>
+                <a href="#" className="text-sm text-gold hover:text-white">Returns & Refunds</a>
               </div>
             </div>
           </div>

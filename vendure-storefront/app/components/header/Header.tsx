@@ -25,7 +25,7 @@ export function Header({
           <button
             type="button"
             
-            className="text-black bg-gold hover:bg-black hover:text-gold hover:outline hover:outline-1 hover:outline-gold focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center"
+            className="text-black bg-gold hover:bg-black hover:text-gold hover:outline hover:outline-1 hover:outline-gold focus:ring-4 focus:outline-none rounded-lg text-sm px-5 py-1 text-center"
           >
             Login
           </button>

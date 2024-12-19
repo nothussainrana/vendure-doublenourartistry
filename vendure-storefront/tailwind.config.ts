@@ -11,7 +11,7 @@ export default {
       colors: {
         primary: colors.sky,
         secondary: colors.emerald,
-        gold: "#D1853A",
+        gold: "#FFB300",
         black: "#000000",
         white: "#FFFFFF",
       },
