@@ -11,7 +11,7 @@ export function Header({
 }) {
   return (
     <header>
-          <nav className="bg-black fixed w-full z-20 top-0 start-0">
+          <nav className="bg-greyishblack fixed w-full z-20 top-0 start-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img

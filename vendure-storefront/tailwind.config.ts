@@ -14,6 +14,7 @@ export default {
         gold: "#FFB300",
         black: "#000000",
         white: "#FFFFFF",
+        greyishblack: "#0C0C0C",
       },
       animation: {
         dropIn: 'dropIn 0.2s ease-out',
@@ -23,6 +24,10 @@ export default {
           '0%': { transform: 'translateY(-100px)' },
           '100%': { transform: 'translateY(0)' },
         },
+      },
+      fontFamily: {
+        raleway: ['Raleway', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
     },
   },

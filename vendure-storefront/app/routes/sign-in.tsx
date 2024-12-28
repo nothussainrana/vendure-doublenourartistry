@@ -31,6 +31,39 @@ export default function SignInPage() {
   const { t } = useTranslation();
 
   return (
-    <h1>This is sign in</h1>
+    <>
+      <div className="flex">
+        <div className="flex-1 bg-greyishblack p-4">
+        </div>
+        <div className="flex-1 bg-greyishblack p-4">
+        </div>
+        <div className="flex-1 bg-white p-4 text-left">
+          <div className="py-28 pl-6">
+            <h2 className="text-3xl font-inter font-semibold">Welcome 👋</h2>
+            <h5 className="text-xs font-inter text-gold pt-2">Please login here.</h5>
+            <div className='pt-8'>
+              <h5 className="text-xs font-inter text-black">Email Address.</h5>
+              <input
+                type="email"
+                className="border-1 border-black rounded-[10px] bg-transparent p-2 mt-2 w-72"
+              />
+            </div>
+            <div className='pt-8'>
+              <h5 className="text-xs font-inter text-black">Password.</h5>
+              <input
+                type="password"
+                className="border-1 border-black rounded-[10px] bg-transparent p-2 mt-2 w-72"
+              />
+            </div>
+            <div className='pt-2'>
+              remember me & Forgot pass
+            </div>
+            <button className="bg-gold text-white text-xs rounded-[10px] p-2 mt-4 w-72 h-10">
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

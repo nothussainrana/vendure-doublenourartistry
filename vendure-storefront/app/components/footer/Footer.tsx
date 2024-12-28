@@ -40,7 +40,7 @@ export default function Footer({
   const { t } = useTranslation();
 
   return (
-<footer className="bg-black text-gray-200 py-5">
+<footer className="bg-greyishblack text-gray-200 py-5">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between space-between">
           <div className="flex-1 flex-col items-center md:items-start mb-6 md:mb-0">
@@ -91,7 +91,7 @@ export default function Footer({
               <input
                 type="email"
                 placeholder="Your Email"
-                className="flex-1 bg-black px-4 py-2 rounded-l-md border border-gold text-gold placeholder-gold focus:outline-none focus:ring-2 focus:ring-gold"
+                className="flex-1 bg-greyishblack px-4 py-2 rounded-l-md border border-gold text-gold placeholder-gold focus:outline-none focus:ring-2 focus:ring-gold"
               />
                 <button className="text-gold px-4 py-2 rounded-r-md">
                   \/
