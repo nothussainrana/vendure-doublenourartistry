@@ -19,10 +19,21 @@ export default function Index() {
 
   return (
     <div className="bg-greyishblack">
-      <div className="bg-greyishblack text-white h-96 flex flex-col justify-center px-5 max-w-screen-xl mx-auto">
-        <h1 className="text-gold text-left text-2xl font-bold">Double Nour Artistry</h1>
-        <p className="text-left text-lg">Custom tailor-made crafts</p>
-      </div>
+      <section className="flex pt-28">
+        <div className="flex w-full max-w-screen-xl mx-auto space-x-5">
+          <div className="flex-1">
+            <div>
+              <h1 className="text-gold text-left text-3xl font-raleway w-80 font-thin">Wear Elegance, Create Masterpieces</h1>
+              <button className="mt-8 border border-gold text-gold py-1 px-8 rounded-lg hover:bg-gold hover:text-black font-raleway text-lg">
+                Shop Now
+              </button>
+            </div>
+          </div>
+          <div className="flex-1">
+            <img className="w-full object-cover" src="your-image.jpg" alt="Image description" />
+          </div>
+        </div>
+      </section>
     </div>
 
   );
