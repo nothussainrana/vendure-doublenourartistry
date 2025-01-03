@@ -29,8 +29,8 @@ export default function Index() {
               </button>
             </div>
           </div>
-          <div className="flex-1">
-            <img className="w-full object-cover" src="your-image.jpg" alt="Image description" />
+          <div className="flex-1 pb-32">
+            <img src="homepage-abstract-woman.png" alt="Image description" />
           </div>
         </div>
       </section>

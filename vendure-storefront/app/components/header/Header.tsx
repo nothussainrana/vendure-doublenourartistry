@@ -15,7 +15,7 @@ export function Header({
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
-            src="/logo.svg"
+            src="/logo.png"
             className="h-16"
             alt="Nour Artistry Logo"
           />

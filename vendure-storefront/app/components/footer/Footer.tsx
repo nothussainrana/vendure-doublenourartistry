@@ -46,7 +46,7 @@ export default function Footer({
           <div className="flex-1 flex-col items-center md:items-start mb-6 md:mb-0">
             <div className="flex items-center mb-4">
               <img
-              src="/logo.svg"
+              src="/logo.png"
               className="h-16"
               alt="Nour Artistry Logo"
             />
