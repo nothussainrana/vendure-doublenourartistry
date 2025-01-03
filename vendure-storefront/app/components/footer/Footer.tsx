@@ -46,10 +46,10 @@ export default function Footer({
           <div className="flex-1 flex-col items-center md:items-start mb-6 md:mb-0">
             <div className="flex items-center mb-4">
               <img
-                src="/logo.png"
-                alt="Double Nour Artistry Logo"
-                className="h-16"
-              />
+              src="/logo.svg"
+              className="h-16"
+              alt="Nour Artistry Logo"
+            />
               <div className="pl-4">
               <p className="font-semibold text-lg text-[#FFB300]">Double Nour</p>
               <p className="font-semibold text-lg text-[#FFB300]">Artistry</p>
@@ -69,12 +69,12 @@ export default function Footer({
           </div>
           <div className="flex-1 flex justify-start md:justify-end pr-20">
             <div className="w-max">
-              <div className="flex flex-col space-y-2 text-left">
-                <a href="#" className="text-sm text-gold hover:text-white">Privacy Policy</a>
-                <a href="#" className="text-sm text-gold hover:text-white">Terms & Conditions</a>
-                <a href="#" className="text-sm text-gold hover:text-white">Payment Methods</a>
-                <a href="#" className="text-sm text-gold hover:text-white">Shipping Policy</a>
-                <a href="#" className="text-sm text-gold hover:text-white">Returns & Refunds</a>
+              <div className="flex flex-col space-y-3 text-left font-thin">
+                <a href="#" className="text-sm text-gold hover:underline">Privacy Policy</a>
+                <a href="#" className="text-sm text-gold hover:underline">Terms & Conditions</a>
+                <a href="#" className="text-sm text-gold hover:underline">Payment Methods</a>
+                <a href="#" className="text-sm text-gold hover:underline">Shipping Policy</a>
+                <a href="#" className="text-sm text-gold hover:underline">Returns & Refunds</a>
               </div>
             </div>
           </div>
@@ -83,15 +83,15 @@ export default function Footer({
 
             {/* Subscribe Form */}
             <div>
-              <p className="text-gold font-bold pb-3 pt-4 md:pt-0">Subscribe</p>
-              <p className="text-sm text-gold">
+              <p className="text-gold text-xl font-bold pb-3 pt-0">Subscribe</p>
+              <p className="text-sm text-gold font-thin">
                 Enter your email below to be the first to know about new collections and product launches
               </p>
-              <div className="flex mt-2">
+              <div className="flex mt-6">
               <input
                 type="email"
                 placeholder="Your Email"
-                className="flex-1 bg-greyishblack px-4 py-2 rounded-l-md border border-gold text-gold placeholder-gold focus:outline-none focus:ring-2 focus:ring-gold"
+                className="flex-1 bg-greyishblack px-4 py-2 rounded-l-md border border-gold text-gold placeholder-gold focus:outline-none focus:ring-2 focus:ring-gold font-thin text-sm"
               />
                 <button className="text-gold px-4 py-2 rounded-r-md">
                   \/
