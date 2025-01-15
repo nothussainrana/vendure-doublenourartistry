@@ -52,7 +52,11 @@ export default function Index() {
       </section>
       <section>
         <div className="w-full max-w-screen-xl mx-auto space-x-5 py-12">
-            <h1 className="text-gold text-left text-5xl font-raleway w-80 font-thin pb-12">Featured Products</h1>
+            <h1 className="text-gold text-left text-3xl font-raleway w-80 font-thin pb-12">Featured Products</h1>
+            <div className="py-64"></div>
+            <div className="flex justify-center">
+              <button className="bg-gold py-2 px-4 text-2xl font-thin">View More</button>
+            </div>
         </div>
       </section>
     </div>
