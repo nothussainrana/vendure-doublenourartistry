@@ -41,7 +41,7 @@ export default function SignInPage() {
         </div>
         <div className="flex-1 bg-white p-4 text-left">
           <div className="py-28 pl-6 w-80">
-            <h2 className="text-3xl font-inter font-semibold">Welcome 👋</h2>
+            <h2 className="text-3xl font-inter font-semibold">Welcome</h2>
             <h5 className="text-xs font-inter text-gold pt-2">Please login here</h5>
             <div className='pt-8'>
               <h5 className="text-xs font-inter text-black">Email Address</h5>

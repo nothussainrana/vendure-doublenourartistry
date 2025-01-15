@@ -29,9 +29,30 @@ export default function Index() {
               </button>
             </div>
           </div>
-          <div className="flex-1 pb-32">
+          <div className="flex-1 pb-4">
             <img src="homepage-abstract-woman.png" alt="Image description" />
           </div>
+        </div>
+      </section>
+      <section>
+        <div className="w-full max-w-screen-xl mx-auto space-x-5 py-12">
+            <h1 className="text-gold text-left text-5xl font-raleway w-80 font-thin pb-12">Our Services</h1>
+            <div className="grid grid-cols-3 grid-rows-2 gap-4">
+              <div className="p-16 text-gold text-2xl">Luxury Wear</div>
+              <div className="p-16 text-gold text-2xl">Traditional Art</div>
+              <div className="p-16 text-gold text-2xl">Art Supplies</div>
+              <div className="p-16 text-gold text-2xl">Ready To Wear Items</div>
+              <div className="p-16 text-gold text-2xl">Digital Art</div>
+              <div className="p-16 text-gold text-2xl">Custom Prints</div>
+            </div>
+        </div>
+        <div>
+          <hr className="bg-gold border-gold w-full h-2" />
+        </div>
+      </section>
+      <section>
+        <div className="w-full max-w-screen-xl mx-auto space-x-5 py-12">
+            <h1 className="text-gold text-left text-5xl font-raleway w-80 font-thin pb-12">Featured Products</h1>
         </div>
       </section>
     </div>
