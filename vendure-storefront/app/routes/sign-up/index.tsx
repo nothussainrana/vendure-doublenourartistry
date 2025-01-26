@@ -45,163 +45,58 @@ export default function SignUpPage() {
 
   return (
     <>
-      <div className="flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          <h2 className="mt-6 text-center text-3xl text-gray-900">
-            {t('account.create')}
-          </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
-            {t('common.or')}{' '}
-            <Link
-              to="/sign-in"
-              className="font-medium text-primary-600 hover:text-primary-500"
-            >
-              {t('account.login')}
-            </Link>
-          </p>
+      <div className="flex">
+        <div className="flex-1 bg-greyishblack p-4">
         </div>
-
-        <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-            <Form className="space-y-6" method="post">
+        <div className="flex-1 bg-greyishblack p-4">
+        </div>
+        <div className="flex-1 bg-white p-4 text-left">
+          <div className="py-8 pl-6 w-96">
+            <h2 className="text-3xl font-inter font-semibold">Create New Account</h2>
+            <h5 className="text-xs font-inter text-gold pt-2">Please enter details</h5>
+            <div className='pt-6'>
+              <h5 className="text-xs font-inter text-black">First Name</h5>
               <input
-                type="hidden"
-                name="redirectTo"
-                value={searchParams.get('redirectTo') ?? undefined}
+                type="text"
+                className="border-1 border-black rounded-[10px] bg-transparent p-2 mt-1 w-full"
               />
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  {t('account.emailAddress')}
-                </label>
-                <div className="mt-1">
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
-                  />
-                  {formErrors?.email && (
-                    <div className="text-xs text-red-700">
-                      {formErrors.email}
-                    </div>
-                  )}
-                </div>
+            </div>
+            <div className='pt-6'>
+              <h5 className="text-xs font-inter text-black">Last Name</h5>
+              <input
+                type="text"
+                className="border-1 border-black rounded-[10px] bg-transparent p-2 mt-1 w-full"
+              />
+            </div>
+            <div className='pt-6'>
+              <h5 className="text-xs font-inter text-black">Email Address</h5>
+              <input
+                type="email"
+                className="border-1 border-black rounded-[10px] bg-transparent p-2 mt-1 w-full"
+              />
+            </div>
+            <div className='pt-6'>
+              <h5 className="text-xs font-inter text-black">Password</h5>
+              <input
+                type="password"
+                className="border-1 border-black rounded-[10px] bg-transparent p-2 mt-1 w-full"
+              />
+            </div>
+            <div className="flex justify-between items-center pt-4 text-xs">
+              <div className="flex items-center">
+              <input 
+                type="checkbox" 
+                id="rememberMe" 
+                className="mr-2 w-4 h-4 rounded border-1 border-black checked:bg-gold checked:border-gold" 
+              />
+              <label htmlFor="rememberMe" className="flex items-center">
+                I agree to the Terms & Conditions
+              </label>
               </div>
-
-              <div>
-                <label
-                  htmlFor="firstName"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  {t('account.firstName')}
-                </label>
-                <div className="mt-1">
-                  <input
-                    id="firstName"
-                    name="firstName"
-                    type="text"
-                    autoComplete="given-name"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="lastName"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  {t('account.lastName')}
-                </label>
-                <div className="mt-1">
-                  <input
-                    id="lastName"
-                    name="lastName"
-                    type="text"
-                    autoComplete="family-name"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="password"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  {t('account.password')}
-                </label>
-                <div className="mt-1">
-                  <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    autoComplete="current-password"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
-                  />
-                  {formErrors?.password && (
-                    <div className="text-xs text-red-700">
-                      {formErrors.password}
-                    </div>
-                  )}
-                </div>
-              </div>
-              <div>
-                <label
-                  htmlFor="repeatPassword"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  {t('account.repeatPassword')}
-                </label>
-                <div className="mt-1">
-                  <input
-                    id="repeatPassword"
-                    name="repeatPassword"
-                    type="password"
-                    autoComplete="current-password"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
-                  />
-                  {formErrors?.repeatPassword && (
-                    <div className="text-xs text-red-700">
-                      {formErrors.repeatPassword}
-                    </div>
-                  )}
-                </div>
-              </div>
-              {formErrors?.form && (
-                <div className="rounded-md bg-red-50 p-4">
-                  <div className="flex">
-                    <div className="flex-shrink-0">
-                      <XCircleIcon
-                        className="h-5 w-5 text-red-400"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <div className="ml-3">
-                      <h3 className="text-sm font-medium text-red-800">
-                        {t('account.createError')}
-                      </h3>
-                      <p className="text-sm text-red-700 mt-2">
-                        {formErrors.form}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              <div>
-                <button
-                  type="submit"
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
-                >
-                  {t('account.signUp')}
-                </button>
-              </div>
-            </Form>
+            </div>
+            <button className="bg-gold text-white text-sm rounded-[10px] p-2 mt-4 w-full h-10">
+              Register
+            </button>
           </div>
         </div>
       </div>

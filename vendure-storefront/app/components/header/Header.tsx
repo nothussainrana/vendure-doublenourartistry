@@ -1,6 +1,12 @@
 import { Link } from "@remix-run/react";
 import { ShoppingBagIcon, UserIcon } from "@heroicons/react/24/outline";
 import { HeartIcon } from "@heroicons/react/24/solid";
+import type { SVGProps } from 'react';
+import { Icon } from '@iconify/react';
+
+export function CodiconChevronDown(props: SVGProps<SVGSVGElement>) {
+	return (<svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} viewBox="0 0 16 16" {...props}><path fill="currentColor" fillRule="evenodd" d="m7.976 10.072l4.357-4.357l.62.618L8.284 11h-.618L3 6.333l.619-.618z" clipRule="evenodd"></path></svg>);
+}
 
 export function Header({
   onCartIconClick,
@@ -44,12 +50,13 @@ export function Header({
               </a>
             </li>
             <li>
-            <a
-                href="#"
-                className="block py-2 px-3 rounded hover:underline md:p-0 text-gold"
-              >
-                Shop
-              </a>
+            <a 
+              href="#" 
+              className="flex items-center py-2 px-3 rounded hover:underline md:p-0 text-gold"
+            >
+              <span>Shop</span>
+              <Icon icon="codicon:chevron-down" className="w-4 h-4 ml-1" />
+            </a>
             </li>
             <li>
             <a

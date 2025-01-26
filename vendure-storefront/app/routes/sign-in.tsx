@@ -40,7 +40,7 @@ export default function SignInPage() {
         <div className="flex-1 bg-greyishblack p-4">
         </div>
         <div className="flex-1 bg-white p-4 text-left">
-          <div className="py-28 pl-6 w-80">
+          <div className="py-28 pl-6 w-96">
             <h2 className="text-3xl font-inter font-semibold">Welcome</h2>
             <h5 className="text-xs font-inter text-gold pt-2">Please login here</h5>
             <div className='pt-8'>
@@ -73,6 +73,10 @@ export default function SignInPage() {
             <button className="bg-gold text-white text-sm rounded-[10px] p-2 mt-4 w-full h-10">
               Login
             </button>
+            <div className="flex pt-4 text-xs space-x-1">
+              <div>No Account?</div>
+              <a href="/sign-up" className="text-gold underline">Register</a>
+            </div>
           </div>
         </div>
       </div>
