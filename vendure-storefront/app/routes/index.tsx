@@ -18,7 +18,7 @@ export default function Index() {
   const headerImage = collections[0]?.featuredAsset?.preview;
 
   return (
-    <div className="bg-greyishblack">
+    <div className="bg-greyishblack px-4">
       <section className="flex pt-28">
         <div className="flex w-full max-w-screen-xl mx-auto space-x-5">
           <div className="flex-1">
