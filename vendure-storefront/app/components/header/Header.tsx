@@ -22,7 +22,17 @@ export function Header({
       <nav className="bg-greyishblack fixed w-full z-20 top-0 start-0 shadow-md">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/logo.png" className="h-16" alt="Nour Artistry Logo" />
+            <div className="flex items-center">
+              <img
+              src="/logo.png"
+              className="h-16"
+              alt="Nour Artistry Logo"
+            />
+              <div className="pl-4">
+              <p className="font-raleway text-lg text-[#FFB300]">Double Nour</p>
+              <p className="font-raleway text-lg text-[#FFB300]">Artistry</p>
+              </div>
+            </div>
           </a>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <a href="/account">
@@ -62,7 +72,7 @@ export function Header({
                   <div className="grid grid-cols-4 divide-x divide-gold">
                     {/* Column 1 */}
                     <div className="px-8">
-                      <h4 className="font-raleway text-gold mb-2">Traditional & Digital Art</h4>
+                      <a href="/collections/traditional-digital-art"><h4 className="font-raleway text-gold mb-2">Traditional & Digital Art</h4></a>
                       <ul className="space-y-1">
                         <li>
                           <a
@@ -92,7 +102,7 @@ export function Header({
                     </div>
                     {/* Column 2 */}
                     <div className="px-4">
-                      <h4 className="font-raleway text-gold mb-2">Luxury Wear & Ready to Wear</h4>
+                      <a href="/collections/luxury-wear-ready-to-wear"><h4 className="font-raleway text-gold mb-2">Luxury Wear & Ready to Wear</h4></a>
                       <ul className="space-y-1">
                         <li>
                           <a
@@ -152,7 +162,7 @@ export function Header({
                     </div>
                     {/* Column 4 */}
                     <div className="px-4">
-                      <h4 className="font-raleway text-gold mb-2">Art Supplies for Artists</h4>
+                      <a href="/collections/art-supplies-for-artists"><h4 className="font-raleway text-gold mb-2">Art Supplies for Artists</h4></a>
                       <ul className="space-y-1">
                         <li>
                           <a

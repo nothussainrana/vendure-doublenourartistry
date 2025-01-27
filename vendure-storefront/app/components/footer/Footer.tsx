@@ -51,8 +51,8 @@ export default function Footer({
               alt="Nour Artistry Logo"
             />
               <div className="pl-4">
-              <p className="font-semibold text-lg text-[#FFB300]">Double Nour</p>
-              <p className="font-semibold text-lg text-[#FFB300]">Artistry</p>
+              <p className="font-raleway text-lg text-[#FFB300]">Double Nour</p>
+              <p className="font-raleway text-lg text-[#FFB300]">Artistry</p>
               </div>
             </div>
             <p className="text-sm text-gold">info@nourartistry.com</p>
