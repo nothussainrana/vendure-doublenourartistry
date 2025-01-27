@@ -14,6 +14,7 @@ export default {
         gold: "#FFB300",
         black: "#000000",
         white: "#FFFFFF",
+        grey: "#171717",
         greyishblack: "#0C0C0C",
       },
       animation: {
