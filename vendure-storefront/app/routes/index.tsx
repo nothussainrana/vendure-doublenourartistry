@@ -18,12 +18,12 @@ export default function Index() {
   const headerImage = collections[0]?.featuredAsset?.preview;
 
   return (
-    <div className="bg-greyishblack px-4">
-      <section className="flex pt-28">
-        <div className="flex w-full max-w-screen-xl mx-auto space-x-5">
+    <div className="bg-greyishblack px-4 max-w-6xl mx-auto">
+      <section className="flex pt-16">
+        <div className="flex w-full mx-auto space-x-5">
           <div className="flex-1">
             <div>
-              <h1 className="text-gold text-left text-3xl font-raleway w-80 font-thin">Wear Elegance, Create Masterpieces</h1>
+              <h1 className="text-gold text-left text-3xl raleway-300 w-80">Wear Elegance, Create Masterpieces</h1>
               <button className="mt-8 border border-gold text-gold py-1 px-8 rounded-lg hover:bg-gold hover:text-black font-raleway text-lg">
                 Shop Now
               </button>
