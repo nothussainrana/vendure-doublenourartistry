@@ -1,2 +1,4 @@
 .DS_Store
 .vscode
+/vendure-backend/.env.template
+/vendure-backend/.env
