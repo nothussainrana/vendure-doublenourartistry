@@ -3,7 +3,7 @@ import { ShoppingBagIcon, UserIcon } from "@heroicons/react/24/outline";
 import { HeartIcon } from "@heroicons/react/24/solid";
 import type { SVGProps } from 'react';
 import { Icon } from '@iconify/react';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 export function CodiconChevronDown(props: SVGProps<SVGSVGElement>) {
@@ -16,7 +16,8 @@ export function Header({
 }: {
   onCartIconClick: () => void;
   cartQuantity: number;
-}) {
+}) 
+ {
   return (
     <header>
       <nav className="bg-greyishblack fixed w-full z-20 top-0 start-0 shadow-md">
@@ -34,10 +35,10 @@ export function Header({
               </div>
             </div>
           </a>
-          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <div className="">
+          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse items-center">
+            <div className="w-6 h-6 mr-4">
               <button
-                className="relative w-9 h-9 bg-white bg-opacity-20 rounded text-white p-1"
+                className="relative w-6 h-6 bg-opacity-20 rounded text-gold"
                 onClick={onCartIconClick}
                 aria-label="Open cart tray"
               >
