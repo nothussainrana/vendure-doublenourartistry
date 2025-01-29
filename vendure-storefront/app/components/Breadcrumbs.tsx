@@ -11,21 +11,14 @@ export function Breadcrumbs({
 
   return (
     <nav className="flex" aria-label="Breadcrumb">
-      <ol role="list" className="flex items-center space-x-1 md:space-x-4">
-        <li>
-          <div>
-            <Link to="/" className="text-gray-400 hover:text-gray-500">
-              <span className="sr-only">{t('home')}</span>
-            </Link>
-          </div>
-        </li>
+      <ol role="list" className="flex items-center">
         {items
           .filter((item) => item.name !== '__root_collection__')
           .map((item, index) => (
             <li key={item.name}>
               <div className="flex items-center">
                 <svg
-                  className="flex-shrink-0 h-5 w-5 text-gray-300"
+                  className="flex-shrink-0 h-5 w-5 text-gray-300 fill-gold"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
                   viewBox="0 0 20 20"
@@ -35,7 +28,7 @@ export function Breadcrumbs({
                 </svg>
                 <Link
                   to={'/collections/' + item.slug}
-                  className="ml-2 md:ml-4 text-xs md:text-sm font-medium text-gray-500 hover:text-gray-700"
+                  className="ml-1 text-sm raleway-300 text-gold hover:underline"
                 >
                   {item.name}
                 </Link>
