@@ -35,6 +35,22 @@ export function Header({
             </div>
           </a>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <div className="">
+              <button
+                className="relative w-9 h-9 bg-white bg-opacity-20 rounded text-white p-1"
+                onClick={onCartIconClick}
+                aria-label="Open cart tray"
+              >
+                <ShoppingBagIcon></ShoppingBagIcon>
+                {cartQuantity ? (
+                  <div className="absolute rounded-full -top-2 -right-2 bg-primary-600 min-w-6 min-h-6 flex items-center justify-center text-xs p-1">
+                    {cartQuantity}
+                  </div>
+                ) : (
+                  ''
+                )}
+              </button>
+            </div>
             <a href="/account">
               <button
                 type="button"
