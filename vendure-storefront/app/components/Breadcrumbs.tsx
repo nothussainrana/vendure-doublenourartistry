@@ -18,7 +18,7 @@ export function Breadcrumbs({
             <li key={item.name}>
               <div className="flex items-center">
                 <svg
-                  className="flex-shrink-0 h-5 w-5 text-gray-300 fill-gold"
+                  className="flex-shrink-0 h-6 w-6 fill-gold"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
                   viewBox="0 0 20 20"
@@ -28,7 +28,7 @@ export function Breadcrumbs({
                 </svg>
                 <Link
                   to={'/collections/' + item.slug}
-                  className="ml-1 text-sm raleway-300 text-gold hover:underline"
+                  className="ml-1 text-sm inter-600 text-gold hover:underline"
                 >
                   {item.name}
                 </Link>

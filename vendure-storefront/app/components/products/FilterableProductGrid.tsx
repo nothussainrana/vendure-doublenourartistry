@@ -49,7 +49,7 @@ export function FilterableProductGrid({
       {result.items.length > 0 ? (
         <div className="sm:col-span-5 lg:col-span-4 space-y-6">
           <div className="flex flex-row justify-between items-center gap-4">
-          <span className="self-start text-gold text-md raleway-500">
+            <span className="self-start text-gold text-md raleway-500">
               {t('product.showing')}{' '}
               {translatePaginationFrom(
                 appliedPaginationPage,
