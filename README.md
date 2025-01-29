@@ -1,5 +1,6 @@
 <h1>Railway monolithic repositry for vendure storefront and backend.</h1>
-Storefront built off <a href="https://github.com/vendure-ecommerce/storefront-remix-starter/tree/master">Vendure Remix Storefront Starter</a>
+<p>Storefront built off <a href="https://github.com/vendure-ecommerce/storefront-remix-starter/tree/master">Vendure Remix Storefront Starter</a></p>
+<p>Built for Ecommerce site doublenourartistry</p>
 
 # Backend
 "npm install" to install dependencies
