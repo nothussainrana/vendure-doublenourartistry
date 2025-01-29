@@ -50,14 +50,14 @@ export default function FacetFilterControls({
               leaveFrom="translate-x-0"
               leaveTo="translate-x-full"
             >
-              <Dialog.Panel className="ml-auto relative max-w-xs w-full h-full bg-white shadow-xl py-4 pb-12 flex flex-col overflow-y-auto">
+              <Dialog.Panel className="ml-auto relative max-w-xs w-full h-full shadow-xl py-4 pb-12 flex flex-col overflow-y-auto">
                 <div className="px-4 flex items-center justify-between">
                   <h2 className="text-lg font-medium text-gray-900">
                     {t('common.filters')}
                   </h2>
                   <button
                     type="button"
-                    className="-mr-2 w-10 h-10 bg-white p-2 rounded-md flex items-center justify-center text-gray-400"
+                    className="-mr-2 w-10 h-10 p-2 rounded-md flex items-center justify-center text-gray-400"
                     onClick={() => setMobileFiltersOpen(false)}
                   >
                     <span className="sr-only">{t('common.closeMenu')}</span>
@@ -145,13 +145,13 @@ export default function FacetFilterControls({
             as="div"
             key={facet.id}
             defaultOpen={true}
-            className="border-b border-gray-200 py-6"
+            className="border-b border-gold py-6"
           >
             {({ open }) => (
               <>
                 <h3 className="-my-3 flow-root">
-                  <Disclosure.Button className="py-3 bg-white w-full flex items-center justify-between text-sm text-gray-400 hover:text-gray-500">
-                    <span className="font-medium text-gray-900 uppercase">
+                  <Disclosure.Button className="py-3 w-full flex items-center justify-between text-sm text-gold hover:underline">
+                    <span className="font-medium text-gold uppercase">
                       {facet.name}
                     </span>
                     <span className="ml-6 flex items-center">
@@ -181,7 +181,7 @@ export default function FacetFilterControls({
                         />
                         <label
                           htmlFor={`filter-${facet.id}-${optionIdx}`}
-                          className="ml-3 text-sm text-gray-600"
+                          className="ml-3 text-sm text-gold"
                         >
                           {value.name}
                         </label>

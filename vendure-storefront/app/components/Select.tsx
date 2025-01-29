@@ -33,7 +33,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           ref={ref}
           {...props}
           defaultValue={defaultValue}
-          className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+          className="block w-full border-0 rounded-md shadow-sm focus:ring-gold focus:border-gold sm:text-sm raleway-400 bg-gold"
           {...getInputProps({})}
         >
           {!noPlaceholder && (

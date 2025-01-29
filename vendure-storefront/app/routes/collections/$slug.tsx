@@ -95,7 +95,7 @@ export default function CollectionSlug() {
       <Breadcrumbs items={collection.breadcrumbs}></Breadcrumbs>
       {collection.children?.length ? (
         <div className="max-w-2xl mx-auto py-16 sm:py-16 lg:max-w-none border-b mb-16">
-          <h2 className="text-2xl font-light text-gray-900">
+          <h2 className="text-2xl font-light text-gold">
             {t('product.collections')}
           </h2>
           <div className="mt-6 grid max-w-xs sm:max-w-none mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">

@@ -48,14 +48,8 @@ export function FilterableProductGrid({
       />
       {result.items.length > 0 ? (
         <div className="sm:col-span-5 lg:col-span-4 space-y-6">
-          <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            {result.items.map((item) => (
-              <ProductCard key={item.productId} {...item} />
-            ))}
-          </div>
-
           <div className="flex flex-row justify-between items-center gap-4">
-            <span className="self-start text-gray-500 text-sm mt-2">
+          <span className="self-start text-gold text-md raleway-500">
               {t('product.showing')}{' '}
               {translatePaginationFrom(
                 appliedPaginationPage,
@@ -68,6 +62,14 @@ export function FilterableProductGrid({
                 result.items.length,
               )}
             </span>
+          </div>
+          <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            {result.items.map((item) => (
+              <ProductCard key={item.productId} {...item} />
+            ))}
+          </div>
+
+          <div className="flex flex-row justify-between items-center gap-4">
             <Pagination
               appliedPaginationLimit={appliedPaginationLimit}
               allowedPaginationLimits={allowedPaginationLimits}
