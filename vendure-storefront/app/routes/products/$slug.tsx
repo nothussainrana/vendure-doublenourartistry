@@ -153,7 +153,7 @@ export default function ProductSlug() {
               <h3 className="sr-only">{t('product.description')}</h3>
 
               <div
-                className="text-base text-gray-700"
+                className="text-gold"
                 dangerouslySetInnerHTML={{
                   __html: product.description,
                 }}
