@@ -95,15 +95,7 @@ export default function ProductSlug() {
   return (
     <div>
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl sm:text-5xl raleway-100 tracking-tight text-gold my-8">
-          {product.name}
-        </h2>
-        <Breadcrumbs
-          items={
-            product.collections[product.collections.length - 1]?.breadcrumbs ??
-            []
-          }
-        ></Breadcrumbs>
+
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-start mt-4 md:mt-12">
           {/* Image gallery */}
           <div className="w-full max-w-2xl mx-auto sm:block lg:max-w-none">
@@ -150,10 +142,19 @@ export default function ProductSlug() {
           {/* Product info */}
           <div className="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
             <div className="">
+                <h2 className="text-3xl sm:text-5xl raleway-100 tracking-tight text-gold mb-4">
+              {product.name}
+            </h2>
+            <Breadcrumbs
+              items={
+                product.collections[product.collections.length - 1]?.breadcrumbs ??
+                []
+              }
+            ></Breadcrumbs>
               <h3 className="sr-only">{t('product.description')}</h3>
 
               <div
-                className="text-gold"
+                className="text-gold mt-4"
                 dangerouslySetInnerHTML={{
                   __html: product.description,
                 }}
@@ -198,8 +199,8 @@ export default function ProductSlug() {
                 ></input>
               )}
 
-              <div className="mt-10 flex flex-col sm:flex-row sm:items-center">
-                <p className="text-3xl text-gray-900 mr-4">
+              <div className="mt-4 flex flex-col sm:flex-row sm:items-center">
+                <p className="text-3xl text-gold mr-4">
                   <Price
                     priceWithTax={selectedVariant?.priceWithTax}
                     currencyCode={selectedVariant?.currencyCode}
@@ -212,11 +213,11 @@ export default function ProductSlug() {
                       activeOrderFetcher.state !== 'idle'
                         ? 'bg-gray-400'
                         : qtyInCart === 0
-                        ? 'bg-primary-600 hover:bg-primary-700'
+                        ? 'bg-gold hover:bg-greyishblack hover:border-gold'
                         : 'bg-green-600 active:bg-green-700 hover:bg-green-700'
                     }
                                      transition-colors border border-transparent rounded-md py-3 px-8 flex items-center
-                                      justify-center text-base font-medium text-white focus:outline-none
+                                      justify-center text-base font-medium text-black hover:text-gold focus:outline-none
                                       focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-primary-500 sm:w-full`}
                     disabled={activeOrderFetcher.state !== 'idle'}
                   >
@@ -229,22 +230,9 @@ export default function ProductSlug() {
                       t('product.addToCart')
                     )}
                   </button>
-
-                  <button
-                    type="button"
-                    className="ml-4 py-3 px-3 rounded-md flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500"
-                  >
-                    <HeartIcon
-                      className="h-6 w-6 flex-shrink-0"
-                      aria-hidden="true"
-                    />
-                    <span className="sr-only">
-                      {t('product.addToFavorites')}
-                    </span>
-                  </button>
                 </div>
               </div>
-              <div className="mt-2 flex items-center space-x-2">
+              <div className="mt-2 flex items-center">
                 <span className="text-gray-500">{selectedVariant?.sku}</span>
                 <StockLevelLabel stockLevel={selectedVariant?.stockLevel} />
               </div>
@@ -254,11 +242,11 @@ export default function ProductSlug() {
                 </div>
               )}
 
-              <section className="mt-12 pt-12 border-t text-xs">
-                <h3 className="text-gray-600 font-bold mb-2">
+              <section className="mt-12 pt-12 border-t text-xs border-gold">
+                <h3 className="text-gold font-bold mb-2">
                   {t('product.shippingAndReturns')}
                 </h3>
-                <div className="text-gray-500 space-y-1">
+                <div className="text-gold space-y-1">
                   <p>{t('product.shippingInfo')}</p>
                   <p>{t('product.shippingCostsInfo')}</p>
                   <p>{t('product.returnsInfo')}</p>
